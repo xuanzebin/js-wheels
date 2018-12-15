@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+}
+#topbar{
+    height:100px;
+    text-align:center;
+    background:green;
+    color:white;
+}
+#topbar.sticky{
+    position:fixed;
+    width:100%;
+    top:0;left:0;
+    opacity:0.5;
+}
+main{
+    background:#ddd;
+    height:1300px;
+}
+button.sticky{
+    position:fixed;
+    top:0; left:0;
+}
