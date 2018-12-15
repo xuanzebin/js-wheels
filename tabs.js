@@ -1,15 +1,16 @@
-function Tabs(selector){
+class Tabs{
+  constructor(selector){
     this.element=$(selector)
     this.init()
     this.bindEvents()
   }
-  Tabs.prototype.init=function(){
+  init(){
     this.element.each(function(index,element){
       $(element).find('.tabs-bar>li').eq(0).addClass('active')
       $(element).find('.tabs-content>li').eq(0).addClass('active')
-    })
+    })  
   }
-  Tabs.prototype.bindEvents=function(){
+  bindEvents(){
     this.element.on('click','.tabs-bar>li',(e)=>{
       var $li=$(e.currentTarget)
       $li.addClass('active').siblings().removeClass('active')
@@ -17,5 +18,6 @@ function Tabs(selector){
       $li.closest('.tabs').find('.tabs-content>li').eq(index).addClass('active').siblings().removeClass('active')
     })
   }
-  
-  var tabs=new Tabs('.tabs')
+}
+
+var tabs=new Tabs('.tabs')
