@@ -1,0 +1,20 @@
+.xuanSlides{
+    overflow:hidden;
+    position:relative;
+}
+.xuanSlides ol{
+    list-style:none;
+    padding:0; margin:0;
+    display:flex;
+    transition:transform 0.3s;
+}
+.xuanSlides-prev{
+    position:absolute;
+    top:50%; left:0;
+    transform:translateY(-50%);
+}
+.xuanSlides-next{
+    position:absolute;
+    top:50%; right:0;
+    transform:translateY(-50%);
+}

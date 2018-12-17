@@ -1,30 +1,30 @@
 *{
-    margin:0;
-    padding:0;
-  }
-  .xuanDialog{
-    position:fixed;
-    left:0; top:0;
-    width:100%;height:100%;
-    background:rgba(222,222,222,0.5);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .xuanDialog-wrapper{
-    background:white;
-    padding:20px;
-    min-width:300px;
-  }
-  .xuanDialog-header{
-    border-bottom:1px solid;
-  }
-  .xuanDialog-main{
-    padding:20px 0px;
-  }
-  .xuanDialog-footer{
-    text-align:right;
-  }
-  .xuanDialog-footer > button{
-    margin-left:10px;
-  }
+  margin:0;
+  padding:0;
+}
+.xuanDialog{
+  position:fixed;
+  left:0; top:0;
+  width:100%;height:100%;
+  background:rgba(222,222,222,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.xuanDialog-wrapper{
+  background:white;
+  padding:20px;
+  min-width:300px;
+}
+.xuanDialog-header{
+  border-bottom:1px solid;
+}
+.xuanDialog-main{
+  padding:20px 0px;
+}
+.xuanDialog-footer{
+  text-align:right;
+}
+.xuanDialog-footer > button{
+  margin-left:10px;
+}
