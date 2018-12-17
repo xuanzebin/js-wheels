@@ -1,0 +1,26 @@
+.xuanSuggestion{
+    display:inline-block;
+    position:relative;
+}
+.xuanSuggestion-list{
+    border:1px solid green;
+    position:absolute;
+    left:0;top:100%;
+    margin:0;padding:0;
+    list-style:none;
+    width:100%;
+}
+.xuanSuggestion-loading,
+.xuanSuggestion-empty{
+    display:none;
+}
+.xuanSuggestion.loading .xuanSuggestion-loading,
+.xuanSuggestion.empty .xuanSuggestion-empty{
+    display:block
+}
+.xuanSuggestion-list>li{
+    cursor: pointer;
+}
+.xuanSuggestion-list>li:hover{
+    color:red;
+}
