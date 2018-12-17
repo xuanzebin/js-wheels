@@ -17,11 +17,17 @@ class Suggestion{
     bindEvents(){
       var timerId
       this.$input.on('input',(e)=>{
+        if(timerId){
+          window.clearTimeout(timerId)
+        }
         let searchContent=e.currentTarget.value
-        this.search(searchContent,timerId)
+        timerId=setTimeout(()=>{
+          this.search(searchContent)
+          timerId=undefined
+        },300)
       })
     }
-    search(searchContent,timerId){
+    search(searchContent){
       this.$ol.empty()
       this.$wrapper.addClass('loading')
       this.$wrapper.removeClass('empty')
@@ -29,10 +35,6 @@ class Suggestion{
         this.$wrapper.removeClass('loading')
         return 
       }
-      if(timerId){
-        window.clearTimeout(timerId)
-      }
-      timerId=setTimeout(()=>{
         this.options.search(searchContent,(array)=>{
           if (!array || array.length===0){
             this.$wrapper.addClass('empty')
@@ -50,8 +52,6 @@ class Suggestion{
               this.$input.val($(e.currentTarget).text())
           })
         })
-        timerId=undefined
-      },300)
     }
   }
   
